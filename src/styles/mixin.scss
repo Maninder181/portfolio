@@ -1,0 +1,111 @@
+@import "variable";
+
+@mixin circle-effect {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  content: "";
+  background-color:#5e3beeb8;
+  opacity: 0.2;
+  filter: blur(132px);
+  width: 500px;
+  height: 515px;
+  pointer-events: none;
+}
+@mixin circle-effect-2 {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  content: "";
+  background-color:#00D7FF91;
+  opacity: 0.2;
+  filter: blur(132px);
+  width: 500px;
+  height: 515px;
+  pointer-events: none;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+/*********heading******/
+@mixin heading1 {
+  font-weight: 700;
+  font-size: 4.6rem;
+  line-height: 105%;
+  font-family: $secondery-font;
+  @media (max-width: 767px) {
+    font-size: 50px;
+  }
+}
+@mixin heading2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 120%;
+  font-family: $secondery-font;
+  @media (max-width: 767px) {
+    font-size: 26px;
+  }
+}
+@mixin heading3 {
+  font-size: 1.5rem;
+  line-height: 140%;
+  font-family: $secondery-font;
+}
+@mixin heading4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.06em;
+  font-family: $secondery-font;
+}
+
+/******font*******/
+@mixin portfolio-font($font-size, $line-height: normal, $weight: 400) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
+@mixin font-main {
+  @include portfolio-font(18px, 30px, 400);
+
+  @media (max-width: $sm-max) {
+    @include portfolio-font(16px, 25px);
+  }
+}
+
+@mixin font-main-midum {
+  @include portfolio-font(18px, 30px, 500);
+
+  @media (max-width: $sm-max) {
+    @include portfolio-font(16px, 25px);
+  }
+}
+
+@mixin font-small-bold {
+  @include portfolio-font(18px, 30px, 700);
+
+  @media (max-width: $sm-max) {
+    @include portfolio-font(16px, 25px);
+  }
+}
+
+@mixin font-medium {
+  @include portfolio-font(16px, 25px, 400);
+}
+
+@mixin font-semi-bold {
+  @include portfolio-font(16px, 25px, 600);
+}
+
+@mixin font-bold {
+  @include portfolio-font(16px, 25px, 700);
+}
+
+@mixin font-small {
+  @include portfolio-font(14px, 1.5);
+}
+
+@mixin font-small-medium {
+  @include portfolio-font(14px, 1.5, 500);
+}

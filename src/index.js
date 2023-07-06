@@ -1,13 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import "../src/styles/globals.scss";
+import "@fontsource/inter"; // Defaults to weight 400
+import "@fontsource/inter/400.css"; // Specify weight
+import App from "./app";
+import { BrowserRouter } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  duration: 1200,
+  once:true,
+});
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// useEffect(() =>{
+//   AOS.init(); // Initialize AOS on component mount
+// },[])
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+       <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

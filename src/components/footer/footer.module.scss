@@ -1,0 +1,26 @@
+@import "../../styles/index.scss";
+.footer {
+  background-color:#f1f1f1;
+  padding:2rem 0;
+}
+.footer_wrap {
+  @include flex;
+  justify-content: space-between;
+  .nav_wrap {
+    ul {
+      @include flex;
+      a {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+.socal_icon {
+  ul {
+    @include flex;
+    align-items: center;
+    li {
+      padding: 0 0 0 1rem;
+    }
+  }
+}
